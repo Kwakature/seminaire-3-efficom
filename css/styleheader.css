@@ -26,6 +26,7 @@
     color: var(--primary);
 }
 
+
 .contener_header {
     display: flex;
     align-items: center;
@@ -42,6 +43,10 @@
     gap: 15px;
     padding: 20px;
     margin-left: auto;
+
+    background-color: var(--secondary);
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+    border-radius: 20px;
 }
 
 .btn-header {
@@ -65,5 +70,4 @@
 
 .btn-header:hover {
     box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
-
 }

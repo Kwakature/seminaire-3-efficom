@@ -4,11 +4,43 @@
     <meta charset="UTF-8">
     <title>Mon premier site</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheef" href="css/style_header.css">
+    <link rel="stylesheet" href="css/styleheader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div id="header-placeholder"></div> 
+    <main>
+        <section class="vigniette">
+            <section class="description">
+                <h2>moi en quelque mots</h2>
+                <p>a ecrire</p>
+            </section>
+            <section class="projet_index">
+                <h2>mes projets</h2>
+                <div class="projet_in_sec">
+                    <div>
+                        <h3>projet 1</h3>
+                        <p>image projet</p>
+                    </div>
+                    <div>
+                        <h3>projet 2</h3>
+                        <p>image</p>
+                    </div>
+                    <div>
+                        <h3>projet 3</h3>
+                        <p>image</p>
+                    </div>
+                </div>
+            </section>
+            <section class="xp_pro">
+                <h2>Experiences</h2>
+                <div class="experience_1">
+                    <h3>experience 1</h3>
+                    <p>excription de l experience</p>
+                </div>
+            </section>
+        </section>
+    </main>
     <script>
         fetch('asset/html/header.html')
         .then(response => response.text())
