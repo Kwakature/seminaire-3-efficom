@@ -9,9 +9,10 @@
     font-family: "Roboto Condensed", sans-serif;
 }
 
+/* format de l'image */
 .img_header {
     border-radius: 50%;
-    border: 3px solid var(--primary);
+    border: 3px solid var(--primary);       /* ajouter annimation */
     width: 100px;          
     height: 100px;         
     object-fit: cover;     
@@ -20,12 +21,25 @@
     box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
 }
 
+/* annimation soulignement header title */
+
 .texteH {
     flex: 1;
     text-align: center;
     color: var(--primary);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.3s ease;
 }
 
+.texteH:hover {
+    text-decoration-color: currentColor;
+}
+
+.titreheader {
+    position: relative;
+    font-size: 2.5rem;
+}
 
 .contener_header {
     display: flex;
@@ -49,6 +63,7 @@
     border-radius: 20px;
 }
 
+/* annimation des bouttons  */
 .btn-header {
     font-family: "Roboto Condensed", sans-serif;
     display: inline-flex;       /* Ajout important */
