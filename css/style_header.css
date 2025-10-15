@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-    --primary: #EE971F;
+    --primary: #9e9e9e;
     --secondary: #f0f0f3;
+}
+
+* {
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .img_header {
@@ -10,14 +16,24 @@
     height: 100px;         
     object-fit: cover;     
     border-radius: 50%;     
-    border: 3px solid white;
+    border: 3px solid var(--primary);
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+}
+
+.texteH {
+    flex: 1;
+    text-align: center;
+    color: var(--primary);
 }
 
 .contener_header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--secondary);
     padding: 0.6rem;
+    border-radius: 15px;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
 }
 
 .boutton_header {
@@ -29,6 +45,7 @@
 }
 
 .btn-header {
+    font-family: "Roboto Condensed", sans-serif;
     display: inline-flex;       /* Ajout important */
     justify-content: center;
     align-items: center;
@@ -38,10 +55,15 @@
     background-color: var(--secondary);
     color: var(--primary);
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     cursor: pointer;
     text-decoration: none;
     font-weight: 500;
+    font-size: large;
+    transition: all 0.3s ease;
+}
+
+.btn-header:hover {
     box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
-    transition: background-color 0.3s ease;
+
 }
