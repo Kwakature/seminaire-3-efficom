@@ -1,53 +1,91 @@
-.image-header {
-  border-radius: 50%; 
-  border: 5px solid white; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-  width: 75px;
-  height: 75px;
-  object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+header {
+    position: relative;
+    z-index: 100;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border-bottom: 1px solid rgba(238, 158, 31, 0.2);
+    box-shadow: 0 8px 32px rgba(238, 158, 31, 0.1);
 }
 
-.image-header:hover {
-  transform: scale(1.1); /* Agrandit l'image de 10% */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Rend l'ombre plus prononcée */
+/* Navigation */
+.haut {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.tout-header {
-  background-color: #EDEAE2;
-  display: flex;
-  flex-direction: row;
-  align-items: center; /* Ajout de cette ligne */
-  padding: 10px;
-  height: 5rem;
-  border-radius: 20px;
+.boutton_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.contener-droite {
-  margin-left: auto;
+/* Boutons glassmorphiques modernes */
+.boutton_header a {
+    position: relative;
+    padding: 12px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #d57d00;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    box-shadow: 
+        0 4px 15px rgba(238, 158, 31, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-.boutton-header {
-  /* Dimensions du carré */
-    width: 100px;
-    height: 75px;
+/* Effet de brillance liquide */
+.boutton_header a::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        135deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        transparent 100%
+    );
+    transform: rotate(45deg) translateX(-100%);
+    transition: transform 0.6s ease;
+}
 
-  /* Couleur de fond */
-  background-color: #EDEAE2; /* Vert - Vous pouvez changer cette couleur */
+.boutton_header a:hover::before {
+    transform: rotate(45deg) translateX(100%);
+}
 
-  /* Comportement et espacement */
-  display: inline-block; /* Permet de définir une largeur/hauteur tout en restant sur la même ligne */
-  margin: 10px;
-  border-radius: 20px;
-  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.9);
+.boutton_header a:hover {
+    background: rgba(238, 158, 31, 0.3);
+    border-color: rgba(238, 158, 31, 0.5);
+    color: #d57d00;
+    transform: translateY(-3px);
+    box-shadow: 
+        0 8px 25px rgba(238, 158, 31, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
 
-  /* Style du texte */
-  color: white; /* Couleur du texte */
-  text-decoration: none; /* Supprime le soulignement par défaut des liens */
-  text-align: center; /* Centre le texte horizontalement */
-  line-height: 75px; /* Centre le texte verticalement (doit être égal à la hauteur) */
+.boutton_header a:active {
+    transform: translateY(-1px);
+}
 
-  /* Police (optionnel) */
-  font-family: sans-serif;
-  font-weight: bold;
+/* Ligne de séparation élégante */
+.ligne {
+    background: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        rgba(238, 158, 31, 0.3) 50%, 
+        transparent 100%
+    );
+    height: 0.1rem;
+    box-shadow: 0 2px 8px rgba(238, 158, 31, 0.15);
 }
