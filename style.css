@@ -1,91 +1,47 @@
-header {
-    position: relative;
-    z-index: 100;
-    padding: 20px 40px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(30px) saturate(180%);
-    -webkit-backdrop-filter: blur(30px) saturate(180%);
-    border-bottom: 1px solid rgba(238, 158, 31, 0.2);
-    box-shadow: 0 8px 32px rgba(238, 158, 31, 0.1);
+:root {
+    --primary: #EE971F;
+    --secondary: #f0f0f3;
 }
 
-/* Navigation */
-.haut {
-    max-width: 1200px;
-    margin: 0 auto;
+.img_header {
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    width: 100px;          
+    height: 100px;         
+    object-fit: cover;     
+    border-radius: 50%;     
+    border: 3px solid white;
+}
+
+.contener_header {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary);
+    padding: 0.6rem;
 }
 
 .boutton_header {
-    display: flex;
+    display: flex;              /* Ajout important */
+    flex-direction: row;
+    gap: 15px;
+    padding: 20px;
+    margin-left: auto;
+}
+
+.btn-header {
+    display: inline-flex;       /* Ajout important */
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-/* Boutons glassmorphiques modernes */
-.boutton_header a {
-    position: relative;
-    padding: 12px 32px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #d57d00;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
-    box-shadow: 
-        0 4px 15px rgba(238, 158, 31, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-/* Effet de brillance liquide */
-.boutton_header a::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        135deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.4) 50%,
-        transparent 100%
-    );
-    transform: rotate(45deg) translateX(-100%);
-    transition: transform 0.6s ease;
-}
-
-.boutton_header a:hover::before {
-    transform: rotate(45deg) translateX(100%);
-}
-
-.boutton_header a:hover {
-    background: rgba(238, 158, 31, 0.3);
-    border-color: rgba(238, 158, 31, 0.5);
-    color: #d57d00;
-    transform: translateY(-3px);
-    box-shadow: 
-        0 8px 25px rgba(238, 158, 31, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
-}
-
-.boutton_header a:active {
-    transform: translateY(-1px);
-}
-
-/* Ligne de séparation élégante */
-.ligne {
-    background: linear-gradient(
-        90deg, 
-        transparent 0%, 
-        rgba(238, 158, 31, 0.3) 50%, 
-        transparent 100%
-    );
-    height: 0.1rem;
-    box-shadow: 0 2px 8px rgba(238, 158, 31, 0.15);
+    height: 4rem;
+    min-width: 5rem;            /* min-width au lieu de width */
+    padding: 0 20px;            /* Ajout de padding */
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+    transition: background-color 0.3s ease;
 }
