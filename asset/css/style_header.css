@@ -1,0 +1,53 @@
+.image-header {
+  border-radius: 50%; 
+  border: 5px solid white; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-header:hover {
+  transform: scale(1.1); /* Agrandit l'image de 10% */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Rend l'ombre plus prononcée */
+}
+
+.tout-header {
+  background-color: #EDEAE2;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Ajout de cette ligne */
+  padding: 10px;
+  height: 5rem;
+  border-radius: 20px;
+}
+
+.contener-droite {
+  margin-left: auto;
+}
+
+.boutton-header {
+  /* Dimensions du carré */
+    width: 100px;
+    height: 75px;
+
+  /* Couleur de fond */
+  background-color: #EDEAE2; /* Vert - Vous pouvez changer cette couleur */
+
+  /* Comportement et espacement */
+  display: inline-block; /* Permet de définir une largeur/hauteur tout en restant sur la même ligne */
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.9);
+
+  /* Style du texte */
+  color: white; /* Couleur du texte */
+  text-decoration: none; /* Supprime le soulignement par défaut des liens */
+  text-align: center; /* Centre le texte horizontalement */
+  line-height: 75px; /* Centre le texte verticalement (doit être égal à la hauteur) */
+
+  /* Police (optionnel) */
+  font-family: sans-serif;
+  font-weight: bold;
+}
