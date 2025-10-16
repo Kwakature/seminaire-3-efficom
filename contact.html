@@ -71,14 +71,8 @@
         </div>
     </main>
     
+    <script src="script.js"></script>
     <script>
-        // Charger le header
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            });
-        
         // Gestion du formulaire
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
