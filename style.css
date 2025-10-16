@@ -92,6 +92,12 @@ body {
     margin-top: 1.5rem;
 }
 
+/* image dans les projets */
+.img_projet {
+    width: 75%;
+    object-fit: cover;
+}
+
 /* Cartes de projets individuels plus carte contact*/
 .projet_in_sec > div {
     flex: 0 1 280px;
@@ -227,6 +233,7 @@ body {
 .contact_img {
     width: 100px;
     height: 100px;
+    object-fit: cover;
 }
 
 /* Responsive */
