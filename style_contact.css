@@ -1,0 +1,229 @@
+/* Container principal du formulaire */
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+}
+
+/* Titre et description */
+.contact-title {
+    color: var(--primary);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.3s ease;
+}
+
+.contact-title:hover {
+    text-decoration-color: currentColor;
+}
+
+.contact-description {
+    text-align: center;
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Formulaire */
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* Cartes pour chaque groupe de champs */
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.form-group:hover {
+    box-shadow: 15px 15px 40px rgb(174, 174, 192, 0.5), -15px -15px 40px rgba(255, 255, 255);
+    transform: translateY(-3px);
+}
+
+.form-group.full-width {
+    flex: 1 1 100%;
+}
+
+/* Labels */
+label {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+/* Inputs et select - style neumorphique interne */
+input[type="text"],
+input[type="email"],
+select {
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-size: 1rem;
+    font-family: "Roboto Condensed", sans-serif;
+    box-shadow: inset 5px 5px 10px rgb(174, 174, 192, 0.3), inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    outline: none;
+    box-shadow: inset 7px 7px 15px rgb(174, 174, 192, 0.4), inset -7px -7px 15px rgba(255, 255, 255, 0.9);
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+select:hover {
+    box-shadow: inset 6px 6px 12px rgb(174, 174, 192, 0.35), inset -6px -6px 12px rgba(255, 255, 255, 0.85);
+}
+
+/* Textarea */
+textarea {
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-size: 1rem;
+    font-family: "Roboto Condensed", sans-serif;
+    resize: vertical;
+    min-height: 150px;
+    box-shadow: inset 5px 5px 10px rgb(174, 174, 192, 0.3), inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    box-shadow: inset 7px 7px 15px rgb(174, 174, 192, 0.4), inset -7px -7px 15px rgba(255, 255, 255, 0.9);
+}
+
+textarea:hover {
+    box-shadow: inset 6px 6px 12px rgb(174, 174, 192, 0.35), inset -6px -6px 12px rgba(255, 255, 255, 0.85);
+}
+
+/* Select personnalisé */
+select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239e9e9e' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+/* Container du bouton */
+.btn-container {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Bouton d'envoi - même style que les autres cartes */
+.submit-btn {
+    padding: 1.5rem 3rem;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Roboto Condensed", sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(174, 174, 192, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+}
+
+.submit-btn:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+.submit-btn:hover {
+    box-shadow: 15px 15px 40px rgb(174, 174, 192, 0.5), -15px -15px 40px rgba(255, 255, 255);
+    transform: translateY(-3px) scale(1.02);
+    color: #7a7a7a;
+}
+
+.submit-btn:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: inset 5px 5px 10px rgb(174, 174, 192, 0.4), inset -5px -5px 10px rgba(255, 255, 255);
+}
+
+.submit-btn i {
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 1.5rem;
+    }
+    
+    .contact-title {
+        font-size: 2rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-group {
+        min-width: 100%;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 1.2rem 2rem;
+    }
+}

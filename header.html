@@ -1,0 +1,52 @@
+<header>
+    <section class="contener_header">
+        <img class="img_header" src="asset/img/photo_moi.png" alt="Photo de profil">
+        <div class="texteH">
+            <h1 class="titreheader">BERTON Arthur</h1>
+        </div>
+        
+        <!-- Burger Menu (visible uniquement sur mobile) -->
+        <div class="burger-menu" id="burgerMenu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </div>
+        
+        <section class="boutton_header" id="menuNav">
+            <a class="btn-header" href="index.html">Accueil</a>
+            <a class="btn-header" href="projet.html">Projet</a>
+            <a class="btn-header" href="apropos.html">A propos</a>
+            <a class="btn-header" href="contact.html">Contact</a>
+        </section>
+    </section>
+    
+    <!-- Overlay pour fermer le menu -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+</header>
+
+<script>
+    // Gestion du burger menu
+    const burgerMenu = document.getElementById('burgerMenu');
+    const menuNav = document.getElementById('menuNav');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const menuLinks = document.querySelectorAll('.btn-header');
+    
+    function toggleMenu() {
+        burgerMenu.classList.toggle('active');
+        menuNav.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        document.body.style.overflow = menuNav.classList.contains('active') ? 'hidden' : '';
+    }
+    
+    burgerMenu.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', toggleMenu);
+    
+    // Fermer le menu quand on clique sur un lien
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                toggleMenu();
+            }
+        });
+    });
+</script>

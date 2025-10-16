@@ -1,0 +1,179 @@
+body {
+    background-color: var(--secondary);
+    color: var(--primary);
+    margin: 0;
+    padding: 0;
+}
+
+/* Espace entre header et main */
+.space {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Container principal avec flexbox */
+.vigniette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+}
+
+/* Container pour description et xp_pro */
+.vigniette-top {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Description et Expériences côte à côte avec largeur max */
+.description,
+.xp_pro {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.description:hover,
+.xp_pro:hover {
+    box-shadow: 15px 15px 40px rgb(174, 174, 192, 0.5), -15px -15px 40px rgba(255, 255, 255);
+    transform: translateY(-3px);
+}
+
+/* Section projets en dessous */
+.projet_index {
+    flex: 1 1 100%;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.projet_index:hover {
+    box-shadow: 15px 15px 40px rgb(174, 174, 192, 0.5), -15px -15px 40px rgba(255, 255, 255);
+}
+
+/* Titres des sections */
+.description h2,
+.xp_pro h2,
+.projet_index h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.3s ease;
+}
+
+.description h2:hover,
+.xp_pro h2:hover,
+.projet_index h2:hover {
+    text-decoration-color: currentColor;
+}
+
+/* Container des projets */
+.projet_in_sec {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+/* Cartes de projets individuels */
+.projet_in_sec > div {
+    flex: 0 1 280px;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.projet_in_sec > div:hover {
+    box-shadow: 15px 15px 40px rgb(174, 174, 192, 0.5), -15px -15px 40px rgba(255, 255, 255);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.projet_in_sec h3 {
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.projet_in_sec p {
+    color: var(--primary);
+    margin: 0;
+}
+
+/* Carte d'expérience */
+.experience_1 {
+    background-color: var(--secondary);
+    border-radius: 15px;
+    padding: 1.2rem;
+    margin-top: 1rem;
+    box-shadow: inset 5px 5px 10px rgb(174, 174, 192, 0.3), inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.experience_1:hover {
+    box-shadow: inset 7px 7px 15px rgb(174, 174, 192, 0.4), inset -7px -7px 15px rgba(255, 255, 255, 0.9);
+}
+
+.experience_1 h3 {
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.experience_1 p {
+    color: var(--primary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Paragraphes généraux */
+.description p,
+.xp_pro p {
+    color: var(--primary);
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .description,
+    .xp_pro {
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .vigniette {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .description,
+    .xp_pro {
+        flex: 1 1 100%;
+    }
+    
+    .space {
+        padding: 1rem;
+    }
+}
