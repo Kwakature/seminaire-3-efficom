@@ -1,0 +1,178 @@
+/* Style de la page À propos */
+.a_propos {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+}
+
+/* Titre principal */
+.titre_propos {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.titre_propos h1 {
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin: 0;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.titre_propos h1:hover {
+    text-decoration-color: currentColor;
+    transform: scale(1.05);
+    color: #7a7a7a;
+}
+
+/* Container gauche - Texte de présentation */
+.c_texte_propos {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.c_texte_propos:hover {
+    box-shadow: 15px 15px 40px rgb(174, 174, 192, 0.5), -15px -15px 40px rgba(255, 255, 255);
+    transform: translateY(-3px);
+}
+
+.texte_propos {
+    color: var(--primary);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Container droite - Aperçu CV */
+.apercu_cv {
+    flex: 0 1 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.apercu_cv:hover {
+    box-shadow: 15px 15px 40px rgb(174, 174, 192, 0.5), -15px -15px 40px rgba(255, 255, 255);
+    transform: translateY(-3px);
+}
+
+/* Image du CV */
+.apropos_cv {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.apropos_cv:hover {
+    transform: scale(1.02);
+    box-shadow: 15px 15px 40px rgb(174, 174, 192, 0.5), -15px -15px 40px rgba(255, 255, 255);
+}
+
+/* Bouton de téléchargement du CV */
+.btn-download-cv {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    height: 3.5rem;
+    padding: 0 2rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+}
+
+.btn-download-cv::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(174, 174, 192, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn-download-cv:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-download-cv:hover {
+    box-shadow: 15px 15px 40px rgb(174, 174, 192, 0.5), -15px -15px 40px rgba(255, 255, 255);
+    transform: translateY(-3px);
+    color: #7a7a7a;
+}
+
+.btn-download-cv:active {
+    transform: translateY(0);
+    box-shadow: inset 5px 5px 10px rgb(174, 174, 192, 0.4), inset -5px -5px 10px rgba(255, 255, 255);
+}
+
+.btn-download-cv i {
+    font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .c_texte_propos {
+        flex: 1 1 100%;
+    }
+    
+    .apercu_cv {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .a_propos {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .titre_propos h1 {
+        font-size: 2rem;
+    }
+    
+    .c_texte_propos,
+    .apercu_cv {
+        padding: 1.5rem;
+    }
+    
+    .texte_propos {
+        font-size: 1rem;
+    }
+}
