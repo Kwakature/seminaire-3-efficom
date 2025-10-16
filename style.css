@@ -223,6 +223,12 @@ body {
     margin: 0;
 }
 
+/* image dans le contact */
+.contact_img {
+    width: 100px;
+    height: 100px;
+}
+
 /* Responsive */
 @media (max-width: 1200px) {
     .description,
