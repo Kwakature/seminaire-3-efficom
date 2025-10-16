@@ -50,7 +50,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* Section projets en dessous */
+/* Section projets en dessous + contact */
 .projet_index {
     flex: 1 1 100%;
     background-color: var(--secondary);
@@ -92,7 +92,7 @@ body {
     margin-top: 1.5rem;
 }
 
-/* Cartes de projets individuels */
+/* Cartes de projets individuels plus carte contact*/
 .projet_in_sec > div {
     flex: 0 1 280px;
     background-color: var(--secondary);
@@ -119,6 +119,7 @@ body {
     color: var(--primary);
     margin: 0;
 }
+
 
 /* Carte d'expérience */
 .experience_1 {
@@ -147,11 +148,79 @@ body {
     margin: 0;
 }
 
+/* parti contact de la main page */
+.contact_main {
+    margin-top: 32px;
+}
+
 /* Paragraphes généraux */
 .description p,
 .xp_pro p {
     color: var(--primary);
     line-height: 1.6;
+}
+
+/* paramettre pour la parti contact en bas de page */
+.contact_main {
+    flex: 1 1 100%;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.contact_main:hover {
+    box-shadow: 15px 15px 40px rgb(174, 174, 192, 0.5), -15px -15px 40px rgba(255, 255, 255);
+}
+
+.contact_main h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.3s ease;
+}
+
+.contact_main h2:hover {
+    text-decoration-color: currentColor;
+}
+
+.option_contact {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.option_contact > section {
+    flex: 0 1 280px;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 10px 10px 30px rgb(174, 174, 192, 0.4), -10px -10px 30px rgba(255, 255, 255);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.option_contact > section:hover {
+    box-shadow: 15px 15px 40px rgb(174, 174, 192, 0.5), -15px -15px 40px rgba(255, 255, 255);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.option_contact h3 {
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.option_contact p {
+    color: var(--primary);
+    margin: 0;
 }
 
 /* Responsive */
