@@ -241,6 +241,7 @@ body {
     .description,
     .xp_pro {
         max-width: none;
+        min-width: 80%;
     }
 }
 

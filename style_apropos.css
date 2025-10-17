@@ -157,6 +157,7 @@
 @media (max-width: 1024px) {
     .c_texte_propos {
         flex: 1 1 100%;
+        min-width: 80%;
     }
     
     .apercu_cv {

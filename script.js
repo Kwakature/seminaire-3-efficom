@@ -24,7 +24,7 @@ fetch('header.html')
         
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth <= 1024) {
+                if (window.innerWidth <= 724) {
                     toggleMenu();
                 }
             });
