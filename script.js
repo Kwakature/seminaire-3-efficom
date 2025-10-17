@@ -43,3 +43,67 @@ document.getElementById('git').addEventListener('click', function() {
 document.getElementById('projet_eff').addEventListener('click', function() {
     window.location.href = "https://github.com/Kwakature/fil-rouge-EFFICOM";
 });
+
+// ====== EmailJS Configuration ======
+(function() {
+    // Initialisation d'EmailJS avec votre Public Key
+    emailjs.init("y5pAgHYgNLQh76PVw"); 
+})();
+
+// ====== Formulaire de contact ======
+// Sélection du formulaire
+const contactForm = document.getElementById('contactForm');
+
+// Création ou récupération du message de statut
+let formStatus = document.getElementById('form-status');
+if (!formStatus) {
+    formStatus = document.createElement('p');
+    formStatus.id = 'form-status';
+    formStatus.style.marginTop = '1rem';
+    formStatus.style.fontWeight = '500';
+    contactForm.appendChild(formStatus);
+}
+
+// Gestion de la soumission du formulaire
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Afficher un message de chargement
+    formStatus.textContent = 'Envoi en cours...';
+    formStatus.style.color = 'var(--muted, #888)';
+
+    // Récupérer les données du formulaire
+    const formData = {
+        nom: document.getElementById('nom').value,
+        prenom: document.getElementById('prenom').value,
+        email: document.getElementById('email').value,
+        entreprise: document.getElementById('entreprise').value,
+        motif: document.getElementById('motif').value,
+        message: document.getElementById('message').value
+    };
+
+    // Envoyer l'email via EmailJS
+    emailjs.send("service_nflkn77", "template_ugancga", formData)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            formStatus.textContent = '✅ Message envoyé avec succès ! Merci.';
+            formStatus.style.color = '#4ade80';
+
+            // Réinitialiser le formulaire
+            contactForm.reset();
+
+            // Masquer le message après 5 secondes
+            setTimeout(() => {
+                formStatus.textContent = '';
+            }, 5000);
+        }, function(error) {
+            console.error('FAILED...', error);
+            formStatus.textContent = "❌ Erreur lors de l'envoi. Veuillez réessayer.";
+            formStatus.style.color = '#f87171';
+
+            // Masquer le message d'erreur après 5 secondes
+            setTimeout(() => {
+                formStatus.textContent = '';
+            }, 5000);
+        });
+});
