@@ -25,30 +25,3 @@
     <!-- Overlay pour fermer le menu -->
     <div class="menu-overlay" id="menuOverlay"></div>
 </header>
-
-<script>
-    // Gestion du burger menu
-    const burgerMenu = document.getElementById('burgerMenu');
-    const menuNav = document.getElementById('menuNav');
-    const menuOverlay = document.getElementById('menuOverlay');
-    const menuLinks = document.querySelectorAll('.btn-header');
-    
-    function toggleMenu() {
-        burgerMenu.classList.toggle('active');
-        menuNav.classList.toggle('active');
-        menuOverlay.classList.toggle('active');
-        document.body.style.overflow = menuNav.classList.contains('active') ? 'hidden' : '';
-    }
-    
-    burgerMenu.addEventListener('click', toggleMenu);
-    menuOverlay.addEventListener('click', toggleMenu);
-    
-    // Fermer le menu quand on clique sur un lien
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                toggleMenu();
-            }
-        });
-    });
-</script>
