@@ -260,3 +260,7 @@ body {
         padding: 1rem;
     }
 }
+
+#projet_eff, #contact_mail, #linke, #git {
+    cursor: pointer;
+}
