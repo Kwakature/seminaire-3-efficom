@@ -44,6 +44,7 @@ document.getElementById('projet_eff').addEventListener('click', function() {
     window.location.href = "https://github.com/Kwakature/fil-rouge-EFFICOM";
 });
 
+
 // ====== EmailJS Configuration ======
 (function() {
     // Initialisation d'EmailJS avec votre Public Key
